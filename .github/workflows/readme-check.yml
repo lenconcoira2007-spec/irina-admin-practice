@@ -1,4 +1,3 @@
-
 name: README Check
 
 on:
@@ -18,6 +17,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Check out repository
+        uses: actions/checkout@v7
+
       - name: Check that README.md exists
         run: test -f README.md
 
